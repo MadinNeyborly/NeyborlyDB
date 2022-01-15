@@ -2,6 +2,8 @@
 
 CREATE SCHEMA public AUTHORIZATION cloudsqlsuperuser;
 
+COMMENT ON SCHEMA public IS 'standard public schema';
+
 -- DROP SEQUENCE public.brands_brand_id_seq;
 
 CREATE SEQUENCE public.brands_brand_id_seq
@@ -263,11 +265,6 @@ CREATE SEQUENCE public.sales_checkout_checkout_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.sales_order_customer_id_seq;
-
-CREATE SEQUENCE public.sales_order_customer_id_seq
-	NO MINVALUE
-	NO MAXVALUE;
 -- DROP SEQUENCE public.sales_order_employee_id_seq;
 
 CREATE SEQUENCE public.sales_order_employee_id_seq
@@ -322,11 +319,6 @@ CREATE SEQUENCE public.sales_order_order_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.sales_order_shipping_id_seq;
-
-CREATE SEQUENCE public.sales_order_shipping_id_seq
-	NO MINVALUE
-	NO MAXVALUE;
 -- DROP SEQUENCE public.sales_order_status_id_seq;
 
 CREATE SEQUENCE public.sales_order_status_id_seq
@@ -705,8 +697,9 @@ CREATE TABLE public.sales_order (
 	date_upd timestamp NOT NULL,
 	order_id serial4 NOT NULL,
 	store_id int4 NOT NULL,
-	transaction_type text NULL,
+	transaction_type text NULL, -- This is to show if its cash or card transaction
 	checkout_id int4 NULL,
+	order_delivery_type text NULL,
 	CONSTRAINT pk_8 PRIMARY KEY (order_id),
 	CONSTRAINT fk_257 FOREIGN KEY (employee_id) REFERENCES public.employees(employee_id),
 	CONSTRAINT fk_428 FOREIGN KEY (store_id) REFERENCES public.stores(store_id),
@@ -715,6 +708,10 @@ CREATE TABLE public.sales_order (
 CREATE INDEX fk_165 ON public.sales_order USING btree (status);
 CREATE INDEX fk_259 ON public.sales_order USING btree (employee_id);
 CREATE INDEX fk_390 ON public.sales_order USING btree (store_id);
+
+-- Column comments
+
+COMMENT ON COLUMN public.sales_order.transaction_type IS 'This is to show if its cash or card transaction';
 
 
 -- public.sales_order_history definition
