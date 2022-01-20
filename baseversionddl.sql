@@ -31,36 +31,9 @@ CREATE SEQUENCE public.creators_creator_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.creators_stores_creator_id_seq;
-
-CREATE SEQUENCE public.creators_stores_creator_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
 -- DROP SEQUENCE public.creators_stores_creator_store_id_seq;
 
 CREATE SEQUENCE public.creators_stores_creator_store_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.creators_stores_store_id_seq;
-
-CREATE SEQUENCE public.creators_stores_store_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.customer_address_customer_id_seq;
-
-CREATE SEQUENCE public.customer_address_customer_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -94,15 +67,6 @@ CREATE SEQUENCE public.employees_employee_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.item_inventory_creator_store_id_seq;
-
-CREATE SEQUENCE public.item_inventory_creator_store_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
 -- DROP SEQUENCE public.item_inventory_inventory_id_seq;
 
 CREATE SEQUENCE public.item_inventory_inventory_id_seq
@@ -115,42 +79,6 @@ CREATE SEQUENCE public.item_inventory_inventory_id_seq
 -- DROP SEQUENCE public.item_inventory_nft_id_seq;
 
 CREATE SEQUENCE public.item_inventory_nft_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.item_inventory_status_id_seq;
-
-CREATE SEQUENCE public.item_inventory_status_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.item_inventory_store_id_seq;
-
-CREATE SEQUENCE public.item_inventory_store_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.item_inventory_variant_id_seq;
-
-CREATE SEQUENCE public.item_inventory_variant_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.item_subcategories_category_id_seq;
-
-CREATE SEQUENCE public.item_subcategories_category_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -184,27 +112,9 @@ CREATE SEQUENCE public.item_variant_variant_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.items_brand_id_seq;
-
-CREATE SEQUENCE public.items_brand_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
 -- DROP SEQUENCE public.items_item_id_seq;
 
 CREATE SEQUENCE public.items_item_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.items_subcategory_id_seq;
-
-CREATE SEQUENCE public.items_subcategory_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -220,36 +130,9 @@ CREATE SEQUENCE public.pos_cash_drawers_drawer_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.pos_cash_drawers_store_id_seq;
-
-CREATE SEQUENCE public.pos_cash_drawers_store_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.pos_cash_transactions_drawer_id_seq;
-
-CREATE SEQUENCE public.pos_cash_transactions_drawer_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
 -- DROP SEQUENCE public.pos_cash_transactions_drawer_transaction_id_seq;
 
 CREATE SEQUENCE public.pos_cash_transactions_drawer_transaction_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.pos_cash_transactions_store_employee_id_seq;
-
-CREATE SEQUENCE public.pos_cash_transactions_store_employee_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -265,36 +148,9 @@ CREATE SEQUENCE public.sales_checkout_checkout_id_seq
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE public.sales_order_employee_id_seq;
-
-CREATE SEQUENCE public.sales_order_employee_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
 -- DROP SEQUENCE public.sales_order_history_history_id_seq;
 
 CREATE SEQUENCE public.sales_order_history_history_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 9223372036854775807
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.sales_order_history_order_id_seq;
-
-CREATE SEQUENCE public.sales_order_history_order_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.sales_order_history_status_id_seq;
-
-CREATE SEQUENCE public.sales_order_history_status_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -306,31 +162,13 @@ CREATE SEQUENCE public.sales_order_history_status_id_seq
 CREATE SEQUENCE public.sales_order_line_line_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
-	MAXVALUE 9223372036854775807
+	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
 -- DROP SEQUENCE public.sales_order_order_id_seq;
 
 CREATE SEQUENCE public.sales_order_order_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.sales_order_status_id_seq;
-
-CREATE SEQUENCE public.sales_order_status_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.sales_payments_order_id_seq;
-
-CREATE SEQUENCE public.sales_payments_order_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
@@ -358,24 +196,6 @@ CREATE SEQUENCE public.statuses_status_id_seq
 -- DROP SEQUENCE public.stores_employees_employee_id_seq;
 
 CREATE SEQUENCE public.stores_employees_employee_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.stores_employees_status_id_seq;
-
-CREATE SEQUENCE public.stores_employees_status_id_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE public.stores_employees_store_employee_id_seq;
-
-CREATE SEQUENCE public.stores_employees_store_employee_id_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
