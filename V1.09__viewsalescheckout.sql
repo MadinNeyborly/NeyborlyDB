@@ -68,7 +68,7 @@ shipping_fee,
 shipping_id,
 Sum(completed_orders) as completed_orders,
 Sum(pending_orders) as pending_orders,
-sum(delivery_flags.gross_amount+delivery_flags.shipping_fee) AS total_amount,
+(sum(delivery_flags.gross_amount)+delivery_flags.shipping_fee) AS total_amount,
 Sum(total_quantity) as total_quantity,
 count(distinct order_id) as no_of_orders
 from delivery_flags
