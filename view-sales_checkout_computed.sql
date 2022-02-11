@@ -1,5 +1,5 @@
 -- public.sales_checkout_computed source
-
+drop view if exists public.sales_checkout_computed;
 CREATE OR REPLACE VIEW public.sales_checkout_computed AS 
 with initial_table as (
 SELECT sales_checkout.checkout_id,
@@ -25,6 +25,7 @@ SELECT sales_checkout.checkout_id,
  sales_checkout.date_upd,
  sales_checkout.discount_amount,
  sales_checkout.discount_code,
+ sales_checkout.status,
  cart_status,
  shipping_fee,
  shipping_id,
@@ -39,11 +40,11 @@ date_add,
 date_upd,
 discount_amount,
 discount_code,
-checkout_status,
 cart_status,
 shipping_fee,
 shipping_id,
 order_id,
+checkout_status,
 CASE
     WHEN status = 'completed' THEN 1
     ELSE 0 end as completed_orders,
@@ -61,13 +62,13 @@ date_add,
 date_upd,
 discount_amount,
 discount_code,
-checkout_status,
 cart_status,
+checkout_status,
 shipping_fee,
 shipping_id,
 Sum(completed_orders) as completed_orders,
 Sum(pending_orders) as pending_orders,
-Sum(gross_amount) as total_amount,
+sum(delivery_flags.gross_amount+delivery_flags.shipping_fee) AS total_amount,
 Sum(total_quantity) as total_quantity,
 count(distinct order_id) as no_of_orders
 from delivery_flags
